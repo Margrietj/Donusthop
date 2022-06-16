@@ -103,6 +103,13 @@ p {
     display: none;
 }
 
+.creator__donut-img {
+    width: 95%;
+    max-width: 600px;
+    display: block;
+    margin: 0 auto;
+}
+
 /* ---- Components ---- */
 
 /* - Buttons - */
@@ -169,7 +176,6 @@ button {
     button {
         margin: 0 auto;
         background-color: var(--primary-color-pink);
-        display: flex;
     }
 }
 
@@ -341,8 +347,8 @@ button {
 .donut-creator__rightcol {
     position: relative;
     display: block;
-    width: 400px;
     height: 400px;
+    max-width: 600px;
     margin: 0 auto;
 }
 
@@ -378,4 +384,130 @@ p.text-ingredient-button {
     border-radius: 3em;
     margin-left: -.4em;
     margin-right: -.4em;
+}
+
+@media (min-width: 900px) {
+    /* ---- Layout ---- */
+    .row {
+        display: flex;
+        gap: 3em;
+    }
+
+    /* ---- Typography ---- */
+    h1,
+    h2,
+    p {
+        text-align: left;
+    }
+
+    .description p {
+        text-align: center;
+    }
+
+
+    /* ---- Styling items ---- */
+    .store__img {
+        display: block;
+        width: 95%;
+        max-width: 600px;
+    }
+
+    .hero__right-col {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+
+    .hero__img {
+        position: relative;
+        top: 0;
+        z-index: 0;
+        opacity: 1;
+        width: 120%;
+        max-width: 600px;
+    }
+    
+    /* ---- Components ---- */
+
+    /* - Menu - */
+    .menu-toggle { 
+        display: none;
+    }
+
+    .menu__navbar {
+        display: block;
+    }
+
+    .navbar__items {
+        justify-content: flex-end;
+        display: flex;
+        gap: 2em;
+    }
+
+    /* - Button - */
+    .hero__cta,
+    .favorites__cta,
+    .creator__cta,
+    .finder__cta {
+        margin-left: 0;
+    }
+
+    .favorites__cta {
+        margin-left: auto;
+        margin-right: 0;
+    }
+
+    
+    /* - Card - */
+    .favorites__product-list {
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: center;
+        gap: 2em;
+        margin-bottom: 2em;
+    }
+
+    .favorites__product {
+        margin: 0;
+    }
+
+    /* - Footer - */
+    .footer-container {
+        display: grid;
+        grid-template-columns: 1fr 2fr 1fr;
+        gap: 3em;
+        grid-template-areas: 
+        "navbar navbar navbar"
+        "logo socials copysign";
+    }
+
+    .footer__navbar {
+        grid-area: navbar;
+        display: block;
+    }
+
+    .footer__socials ul {
+        margin: 0;
+    }
+
+    .navbar__list {
+        flex-direction: row;
+        justify-content: center;
+        align-items: center;
+        gap: 2em;
+    }
+        
+    /* - Donut creator layout - */
+    .donut-creator__rightcol {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+    }
+
+
+    /* - Donut creator ingredient buttons - */
+    .creator__options {
+        justify-content: flex-start;
+    }
+
 }
