@@ -1,0 +1,150 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Donut creator</title>
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600&display=swap" rel="stylesheet">
+</head>
+<body>
+    <header>
+        <div class="menu">
+            <div class="container row">
+                <a class="menu__logo" href="#">
+                    <p class="logotext">D<span>o</span>nut</p>
+                </a>
+                <button class="menu-toggle" aria-label="open navigation">
+                    <span class="hamburger"></span>
+                </button>
+                <!-- <img id="menu__open" class="menu__burger-open" src="links/menu.svg" alt="open navigation"> -->
+                <div class="menu__navbar">
+                    <ul class="navbar__items">
+                        <li class="nav__item"><a href="index.html">Home</a></li>
+                        <li class="nav__item current"><a href="#">Donut creator</a></li>
+                        <li class="nav__item"><a href="#">Products</a></li>
+                        <li class="nav__item"><a href="#">About</a></li>
+                        <li class="nav__item"><button class=" bestellen__cta" type="button">Bestellen</button></li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </header>
+
+    <main>
+        <div class="donut-creator">
+            <div class="container">
+                <h1 class="creator__header">Jouw donut</h1>
+                <div class="donut-creator__content row">
+                    <div class="donut-creator__leftcol col">
+                         
+                        <p class="text__dough">Donut</p>
+                         <div class="creator__options">
+                            <button onclick="updateDeeg('Plaindough')" type="button" class="ingredient-button">
+                                <div class="ingredient-color-div" style="background-color:#CFA77D;"></div>
+                                <p class="text-ingredient-button">Normaal</p>
+                            </button>
+                            <button onclick="updateDeeg('Cinnamondough')" type="button" class="ingredient-button">
+                                <div class="ingredient-color-div" style="background-color:#DE8451;"></div>
+                                <p class="text-ingredient-button">Kaneel</p>
+                            </button>
+                            <button onclick="updateDeeg('Chocolatdough')" type="button" class="ingredient-button">
+                                <div class="ingredient-color-div" style="background-color:#724136;"></div>
+                                <p class="text-ingredient-button">Chocolade</p>
+                            </button>
+                            <button onclick="updateDeeg('Redvelvetdough')" type="button" class="ingredient-button">
+                                <div class="ingredient-color-div" style="background-color:#C04E4C;"></div>
+                                <p class="text-ingredient-button">Redvelvet</p>
+                            </button>
+                        </div>
+
+                    <p class="text__dough">Glazuur</p>
+                    <div class="creator__options">
+                        <button onclick="updateGlazuur('Glaze_Sugar')" type="button" class="ingredient-button">
+                            <div class="ingredient-color-div" style="background-color:#C1C5D9;"></div>
+                            <p class="text-ingredient-button">Suiker</p>
+                        </button>
+                        <button onclick="updateGlazuur('Glaze_Strawberry')" type="button" class="ingredient-button">
+                            <div class="ingredient-color-div" style="background-color:#D6909F;"></div>
+                            <p class="text-ingredient-button">Aardbei</p>
+                        </button>
+                        <button onclick="updateGlazuur('Glaze_Bosbes')" type="button" class="ingredient-button">
+                            <div class="ingredient-color-div" style="background-color:#B091CF;"></div>
+                            <p class="text-ingredient-button">Bosbes</p>
+                        </button>
+                        <button onclick="updateGlazuur('Glaze_Banana')" type="button" class="ingredient-button">
+                            <div class="ingredient-color-div" style="background-color:#EDD995;"></div>
+                            <p class="text-ingredient-button">Banaan</p>
+                        </button>
+                        <button onclick="updateGlazuur('Glaze_Chocolat')" type="button" class="ingredient-button">
+                            <div class="ingredient-color-div" style="background-color:#724136;"></div>
+                            <p class="text-ingredient-button">Chocolade</p>
+                        </button>
+                    </div> 
+
+                    <p class="text__dough">Topping</p>
+                    <div class="creator__options">
+                        <button onclick="updateTopping('Topping_SprinklesMulti')" type="button" class="ingredient-button">
+                            <div class="ingredient-color-div" style="background-color:#D95672;"></div>
+                            <p class="text-ingredient-button">Multi-sprinkels</p>
+                        </button>
+                        <button onclick="updateTopping('Topping_Cookiemonster')" type="button" class="ingredient-button">
+                            <div class="ingredient-color-div" style="background-color:#6D88E8;"></div>
+                            <p class="text-ingredient-button">Cookie-monster</p>
+                        </button>
+                        <button onclick="updateTopping('Topping_Marshmellows')" type="button" class="ingredient-button">
+                            <div class="ingredient-color-div" style="background-color:#F0B9C5;"></div>
+                            <p class="text-ingredient-button">Marshmellows</p>
+                        </button>
+                        <button onclick="updateTopping('Topping_Chocoballs')" type="button" class="ingredient-button">
+                            <div class="ingredient-color-div" style="background-color:#724136;"></div>
+                            <p class="text-ingredient-button">Chocoballs</p>
+                        </button>
+                    </div> 
+                    </div>
+                    <div class="donut-creator__rightcol col">
+                        <img class="creator__img" id="img-dough" src="links/Plaindough.png" alt="donut deeg normaal">
+                        <img class="creator__img" id="img-glaze" src="links/Glaze_Sugar.png" alt="donut glazuur suiker">
+                        <img class="creator__img" id="img-topping" src="links/Topping_SprinklesMulti.png" alt="donut topping multi color sprinkels">
+                    </div>
+                </div>
+            </div>
+        </div>
+    </main>
+
+    <footer>
+        <div class="container footer-container">
+            <div class="footer__logo">
+                <a class="menu__logo col" href="#">
+                    <p class="logotext">D<span>o</span>nut</p>
+                </a>
+            </div>
+            <div class="footer__navbar">
+                <ul class="navbar__list">
+                    <li class="nav__item"><a href="#">Home</a></li>
+                    <li class="nav__item"><a href="index-creator.html">Donut creator</a></li>
+                    <li class="nav__item"><a href="#">About us</a></li>
+                    <li class="nav__item"><a href="#">Contact</a></li>
+                    <li class="nav__item"><button class="bestellen__cta" type="button">Bestellen</button></li>
+                </ul>
+            </div>
+            <div class="footer__copy">
+                <p>&copy;Donutshop, 2022</p>
+            </div>
+            <div class="footer__socials">
+                <ul class="footer__socials-ul">
+                    <li><img src="links/icon-social-linkedin.png" alt="linkedin icon"></li>
+                    <li><img src="links/icon-social-instagram.png" alt="Instagram icon"></li>
+                    <li><img src="links/icon-social-facebook.png" alt="Facebook icon"></li>
+                    <li><img src="links/icon-social-twitter.png" alt="Twitter icon"></li>
+                </ul>
+            </div>
+        </div>
+    </footer>
+    
+    <script src="main.js"></script>
+</body>
+</html>

@@ -1,0 +1,381 @@
+/* ---- Global style ---- */
+@import url('https://fonts.googleapis.com/css2?family=Ubuntu:wght@300;700&display=swap');
+
+:root {
+    --primary-color-pink: hsl(0, 39%, 62%);
+    --primary-color-blue: hsl(189, 39%, 62%);
+    --pirmary-color-violet: hsl(241, 39%, 62%);
+}
+
+*, 
+*::before, 
+*::after {
+    box-sizing: border-box;
+}
+
+body {
+    margin: 0;
+    font-family: 'Poppins', sans-serif;
+    font-size: 16px;
+    background-color: #E4F2F4;
+}
+
+img {
+    max-width: 100%;
+}
+
+ul {
+    list-style: none;
+    padding: 0;
+    display: flex;
+
+}
+
+a {
+    text-decoration: none;
+    color: #282828;
+}
+
+/* ---- Typography ---- */
+
+h1,
+h2,
+p {
+    margin-top: 0;
+    text-align: center;
+}
+
+h1 {
+    font-size: 3rem;
+    font-weight: normal;
+    color: #282828;
+}
+
+.hero__header {
+    margin-top: 3em;
+}
+
+.creator__header {
+    margin-top: 1em;
+}
+
+h2 {
+    font-size: 2.5rem;
+    font-weight: normal;
+}
+
+h2,
+p {
+    color: #464646;
+}
+
+.subhead {
+    font-size: 1.5rem;
+}
+
+/* ---- Layout ---- */
+.container {
+    width: 80%;
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 3em 0;
+}
+
+.col {
+    width: 100%;
+}
+
+/* ---- Styling items ---- */
+.hero {
+    height: 100vh;
+    position: relative;
+    overflow: hidden;
+}
+
+.hero__img {
+    position: absolute;
+    top: 0;
+    z-index: -1;
+    opacity: .4;
+}
+
+.store__img {
+    display: none;
+}
+
+/* ---- Components ---- */
+
+/* - Buttons - */
+button {
+    color: white;
+    font-size: 1em;
+    font-weight: bold;
+    font-family: 'Poppins', sans-serif;
+    text-decoration: none;
+    border: none;
+    border-radius: .3em;
+    text-align: center;
+    display: block;
+    padding: .5em 1em;
+    cursor: pointer;
+
+    &:hover {
+        opacity: 0.75;
+    }
+}
+
+.hero__cta,
+.favorites__cta,
+.creator__cta,
+.finder__cta {
+    margin: 0 auto;
+}
+
+.hero__cta {
+    background-color: var(--pirmary-color-violet);
+}
+
+.favorites__cta {
+    background-color: var(--primary-color-blue);
+}
+
+.creator__cta {
+    background-color: var(--primary-color-pink);
+}
+
+.finder__cta {
+    background-color: var(--pirmary-color-violet);
+}
+
+.bestellen__cta {
+    background-color: var(--primary-color-pink);
+    padding: .2em 1em;
+}
+
+/* - Cards - */
+.favorites__product {
+    background: white;
+    width: 18em;
+    height: 27em;
+    margin: 2em auto;
+    border-radius: .7em;
+
+    img {
+        width: 90%;
+        margin: 0 auto;
+        display: block;
+    }
+
+    button {
+        margin: 0 auto;
+        background-color: var(--primary-color-pink);
+        display: flex;
+    }
+}
+
+/* - Menu - */
+.menu {
+    height: 5.5em;
+    background-color: white;
+}
+
+.menu .row {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 1.5em 0;
+    position: relative;
+}
+
+.menu__navbar {
+    display: none;
+}
+
+.menu__navbar--visible {
+    position: absolute;
+    display: flex;
+    top: 4.9em;
+    height: auto;
+    width: 100vw;
+    margin-left: -10vw;
+    justify-content: center;
+    z-index: 2;
+    background-color: white;
+
+
+    ul {
+        flex-direction: column;
+        gap: 2em;
+        text-align: center;
+        align-items: center;
+        
+       li:hover {
+        font-weight: bold;
+       }
+    }
+}
+
+
+/* - Logo - */
+.menu__logo {
+    font-family: 'Ubuntu', sans-serif;
+    font-size: 2.2rem;
+
+    span {
+        font-weight: bold;
+    }
+
+    p {
+        margin: 0;
+        color: var(--pirmary-color-violet);
+    }
+}
+
+/* - Hamburger icon - */
+.menu-toggle {
+    cursor: pointer;
+    border: 0;
+    width: 3rem;
+    height: 3rem;
+    padding: 0em;
+    border-radius: 50%;
+    background: var(--pirmary-color-violet);
+    color: white;
+
+    &:hover {
+        opacity: 0.75;
+    }
+}
+
+.hamburger {
+    width: 50%;
+    position: relative;
+}
+
+.hamburger {
+    display: block;
+    margin: 0 auto;
+    height: 3px;
+    background-color: white;
+
+    &::before, &::after {
+        content: "";
+        width: 100%;
+    }
+
+    &::before {
+        transform: translateY(-6px);
+    }  
+
+    &::after {
+        transform: translateY(3px); 
+    }
+}
+
+.hamburger,
+.hamburger::before,
+.hamburger::after {
+  display: block;
+  margin: 0 auto;
+  height: 3px;
+  background: white;
+}
+
+/* - Footer - */
+.footer-container {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 1em;
+    grid-template-areas: 
+    "navbar navbar"
+    "socials socials"
+    "logo copysign";
+}
+
+.footer__logo {
+    grid-area: logo;
+    justify-self: start;
+    align-self: end;
+}
+
+.footer__navbar {
+    grid-area: navbar;
+    display: none;
+}
+
+.footer__copy {
+    grid-area: copysign;
+    justify-self: end;
+    align-self: end;
+}
+
+.footer__socials {
+    grid-area: socials;
+}
+
+.navbar__list {
+    flex-direction: column;
+    align-items: center;
+    gap: 1em;
+}
+
+.footer__socials-ul {
+    justify-content: center;
+    gap: 2em;
+
+    li {
+        display: flex;
+        justify-content: center;
+    }
+
+    img {
+        width: 80%;
+    }
+}
+
+.footer__copy p{
+    margin: 0;
+}
+
+/* - Donut creator img - */
+.donut-creator__rightcol {
+    position: relative;
+    display: block;
+    width: 400px;
+    height: 400px;
+    margin: 0 auto;
+}
+
+.creator__img {
+    position: absolute;
+}
+
+/* - Donut creator ingredient buttons - */
+.creator__options {
+    display: flex;
+    gap: 1em;
+    justify-content: center;
+    margin-bottom: 3em;
+}
+
+p.text-ingredient-button {
+    display: none;
+    margin: 0;
+    align-self: center;
+    margin-left: .5em;
+}
+
+.ingredient-button {
+    background-color: white;
+    border-radius: 3em;
+    text-align: left;
+    display: flex;
+}
+
+.ingredient-color-div {
+    height: 2.2em;
+    width: 2.2em;
+    border-radius: 3em;
+    margin-left: -.4em;
+    margin-right: -.4em;
+}
