@@ -434,7 +434,7 @@ p.text-ingredient-button {
   margin-right: -.4em;
 }
 
-@media (min-width: 900px) {
+@media only screen and (min-width: 900px) {
   /* ---- Layout ---- */
   .row {
     display: -webkit-box;
