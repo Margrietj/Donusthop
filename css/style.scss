@@ -34,6 +34,10 @@ ul {
 a {
     text-decoration: none;
     color: #282828;
+
+    &:hover {
+        font-weight: bold;
+    }
 }
 
 /* ---- Typography ---- */
@@ -368,7 +372,7 @@ p.text-ingredient-button {
     display: none;
     margin: 0;
     align-self: center;
-    margin-left: .5em;
+    font-weight: normal;
 }
 
 .ingredient-button {
@@ -391,6 +395,7 @@ p.text-ingredient-button {
     .row {
         display: flex;
         gap: 3em;
+        align-items: center;
     }
 
     /* ---- Typography ---- */
@@ -456,14 +461,13 @@ p.text-ingredient-button {
         margin-left: auto;
         margin-right: 0;
     }
-
     
     /* - Card - */
     .favorites__product-list {
         display: flex;
         flex-wrap: wrap;
         justify-content: center;
-        gap: 2em;
+        gap: 1em;
         margin-bottom: 2em;
     }
 
@@ -511,3 +515,19 @@ p.text-ingredient-button {
     }
 
 }
+
+@media only screen and (min-width: 1200px) { 
+
+    p.text-ingredient-button {
+        display: block;
+        align-self: center;
+        font-size: .9rem;
+    }
+
+    .ingredient-color-div {
+        height: 1.5em;
+        width: 1.5em;
+        margin-right: .5em;
+    }
+}
+

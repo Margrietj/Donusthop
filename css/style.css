@@ -37,6 +37,10 @@ a {
   color: #282828;
 }
 
+a:hover {
+  font-weight: bold;
+}
+
 /* ---- Typography ---- */
 h1,
 h2,
@@ -414,7 +418,7 @@ p.text-ingredient-button {
   -ms-flex-item-align: center;
       -ms-grid-row-align: center;
       align-self: center;
-  margin-left: .5em;
+  font-weight: normal;
 }
 
 .ingredient-button {
@@ -441,6 +445,9 @@ p.text-ingredient-button {
     display: -ms-flexbox;
     display: flex;
     gap: 3em;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
   }
   /* ---- Typography ---- */
   h1,
@@ -514,7 +521,7 @@ p.text-ingredient-button {
     -webkit-box-pack: center;
         -ms-flex-pack: center;
             justify-content: center;
-    gap: 2em;
+    gap: 1em;
     margin-bottom: 2em;
   }
   .favorites__product {
@@ -569,6 +576,21 @@ p.text-ingredient-button {
     -webkit-box-pack: start;
         -ms-flex-pack: start;
             justify-content: flex-start;
+  }
+}
+
+@media only screen and (min-width: 1200px) {
+  p.text-ingredient-button {
+    display: block;
+    -ms-flex-item-align: center;
+        -ms-grid-row-align: center;
+        align-self: center;
+    font-size: .9rem;
+  }
+  .ingredient-color-div {
+    height: 1.5em;
+    width: 1.5em;
+    margin-right: .5em;
   }
 }
 /*# sourceMappingURL=style.css.map */
